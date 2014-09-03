@@ -21,6 +21,10 @@ $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
+$white-color:      #fefefe;
+$black-color:      #141414;
+$green-color:      #31c384;
+
 $on-palm:          600px;
 $on-laptop:        800px;
 
@@ -45,5 +49,4 @@ $on-laptop:        800px;
 @import
         "base",
         "layout",
-        "syntax-highlighting"
-;
+        "syntax-highlighting";
