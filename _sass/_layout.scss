@@ -4,6 +4,7 @@
 .site-header {
     min-height: 56px;
     background-color: $black-color;
+    background-color: black;
     // Positioning context for the mobile navigation icon
     position: relative;
 
@@ -48,6 +49,9 @@
         .menu-link{
             font-size: 12px;           
         }
+        &:visited {
+            background-color: $grey-color;
+        } 
 
     }
 
