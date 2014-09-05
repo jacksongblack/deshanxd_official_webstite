@@ -20,7 +20,10 @@ $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 $white-color:      #fefefe;
+
 $black-color:      #141414;
+$black-color-light: lighten($black-color,40%);
+
 $green-color:      #31c384;
 
 $on-palm:          600px;

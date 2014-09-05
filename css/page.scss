@@ -1,0 +1,74 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+img{
+max-width: 200%
+}
+
+$white-color:      #fefefe;
+
+
+.page-background-image{
+    width:100%;
+    height: 100%;
+    min-height:250px;  
+    _height:250px;  
+    overflow:hidden;
+    z-index: -1;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.page-position-base {
+    position: fixed;
+    opacity: 0;
+    left: 0;
+    right: 0;
+}
+.page-logo {
+    @extend.page-position-base;
+    top: 30%;
+    img{
+    }
+}
+
+.page-navigation {
+    @extend .page-position-base ;
+    top: 12%;
+    opacity: 1;
+    a {
+        display: block;
+        position:relative;
+    }
+    .nav-home {
+        bottom: 447px;
+        left: 60px;
+
+    }
+    .nav-about{
+        bottom: 286px;
+        right: 158px;  
+    }
+    .nav-contact-us {
+        bottom: 620px;
+        right: 140px;
+    }
+    .nav-cor-culture{
+        bottom: 405px;
+        left: 57px;
+    }
+    .nav-company-profile {
+        bottom: 687px;
+        left: 211px;
+    }
+    
+}
+
+
+
+.page-home-link {
+    @extend .page-position-base;
+    top: 75%;
+}
