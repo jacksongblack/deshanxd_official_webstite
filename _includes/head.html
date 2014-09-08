@@ -6,15 +6,14 @@
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{{ site.description }}">
 
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+    <link rel="stylesheet" href="{{ "css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <script src="{{"/javascript/jquery-2.1.1.min.js" | prepend: site.baseurl }}" ></script>  
-    <script src="{{"/javascript/jQueryRotate.js" | prepend: site.baseurl }}" ></script>  
-
-    {% if page.pageType  %}
-    <script src="{{"/javascript/page.js" | prepend: site.baseurl }}" ></script>
-    <link rel="stylesheet" href="{{ "/css/page.css" | prepend: site.baseurl }}">
-    {% endif %}
+    <script src="{{"javascript/jquery-2.1.1.min.js" | prepend: site.baseurl }}" ></script>  
+    <link rel="stylesheet" href="{{ "css/page.css" | prepend: site.baseurl }}">
+    <script src="{{"javascript/animate.js" | prepend: site.baseurl }}" ></script>
+    {% if page.pageName == 'team' %}
+    <script src="{{"javascript/team.js" | prepend: site.baseurl }}" ></script>
+    {% endif  %}
 
 <!--[if lt IE 9]>    
 <script>  (function(){if(!/*@cc_on!@*/0)return;var e = "abbr,article,aside,audio,canvas,datalist,details,dialog,eventsource,figure,footer,header,hgroup,mark,menu,meter,nav,output,progress,section,time,video".split(','),i=e.length;while(i--){document.createElement(e[i])}})();</script>
