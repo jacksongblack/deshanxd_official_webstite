@@ -164,17 +164,16 @@ img{
               }
           }
           %page-profile-base{
-              border: 1px solid white;
+              border: 2px solid white;
               border-radius: 45px;
               width: 60px;
               position: absolute;
               height: 60px;
               line-height: 60px;
-              color: black;
-              background: white;
+              font-family: "微软雅黑";
+              font-size: 12px;
               &:hover {
-                  color: white;
-                  background: #31c384;
+                  background: #ff9900;
                   }
               }
           .page-profile {
@@ -182,36 +181,43 @@ img{
               left: 0;
               right: 0;
               top: 25%;
+              color: white;
               .page-profile-image{
                   width: 70%;
               }
               
               .page-profile-one {
                   @extend %page-profile-base;
-                  bottom: 80%;
+                  bottom: 73.5%;
                   left: 26%;
               }
               .page-profile-two {
                   @extend %page-profile-base;
-                  bottom: 99%;
-                  left: 69%;
+                  bottom: 100%;
+                  left: 66%;
               }
               .page-profile-three {
                   @extend %page-profile-base;
-                  bottom: -11%;
-                  left: 51%;
+                  bottom: 17%;
+                  left: 48.5%;
               }
               .page-profile-four {
                   @extend %page-profile-base;
-                  bottom: 21%;
-                  left: 79%; 
+                  bottom: -18%;
+                  left: 74.8%; 
               }
               .page-profile-text {
                   position: absolute;
                   left: 139%;
-                  top: -31%;
+                  top: -15%;
                   width: 400px;
+                  display: none;
+                  font-size: 12px;
+                  line-height: 21px;
+                  color: white;
+                  text-indent: 20px;
                   text-align: left;
+                  font-family: "宋体";
               }
           }
           // 动画
