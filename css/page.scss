@@ -21,8 +21,8 @@ img{
 }
 .page-map-tag {
     position: absolute;
-    top: 44%;
-    right: 60%;
+    top: 47%;
+    right: 63%;
 }
 %page-position-base {
     position: fixed;
@@ -93,7 +93,7 @@ img{
               top: 25%;
               width: 393px;
               height: 453px;
-              left: 35%;
+              left: 38%;
               -webkit-animation: page-nav-move 50s linear 0s infinite;
               -moz-animation: page-nav-move 50s linear 0s infinite;
               -ms-animation: page-nav-move 50s linear 0s infinite;
@@ -128,7 +128,7 @@ img{
                }
               .page-team-close {
                 position: fixed;
-                left: 97%;
+                right: 8px;
               }
               .page-team-head-list{
                   .transerse_line {
@@ -189,26 +189,26 @@ img{
               .page-profile-one {
                   @extend %page-profile-base;
                   bottom: 80%;
-                  left: 25%;
+                  left: 26%;
               }
               .page-profile-two {
                   @extend %page-profile-base;
                   bottom: 99%;
-                  left: 68%;
+                  left: 69%;
               }
               .page-profile-three {
                   @extend %page-profile-base;
-                  bottom: -14%;
-                  left: 50%;
+                  bottom: -11%;
+                  left: 51%;
               }
               .page-profile-four {
                   @extend %page-profile-base;
-                  bottom: 17%;
-                  left: 78%; 
+                  bottom: 21%;
+                  left: 79%; 
               }
               .page-profile-text {
                   position: absolute;
-                  left: 138%;
+                  left: 139%;
                   top: -31%;
                   width: 400px;
                   text-align: left;
