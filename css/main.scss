@@ -3,7 +3,7 @@
 ---
 @charset "utf-8";
 
-// Our variables
+//全局变量
 $base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
@@ -46,5 +46,4 @@ $on-laptop:        800px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
-        "layout",
-        "syntax-highlighting";
+        "layout";

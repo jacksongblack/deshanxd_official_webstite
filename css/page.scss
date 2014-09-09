@@ -2,73 +2,259 @@
 # Only the main Sass file needs front matter (the dashes are enough)
 ---
 @charset "utf-8";
-img{
-max-width: 200%
-}
 
 $white-color:      #fefefe;
-
-
-.page-background-image{
-    width:100%;
-    height: 100%;
-    min-height:250px;  
-    _height:250px;  
+$black-color:      #141414;
+img{
+    max-width: 200%
+}
+.page-background{
     overflow:hidden;
-    z-index: -1;
-    img{
+    z-index: -99;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    .page-background-image{
         width: 100%;
         height: 100%;
     }
 }
-.page-position-base {
+.page-map-tag {
+    position: absolute;
+    top: 44%;
+    right: 60%;
+}
+%page-position-base {
     position: fixed;
+    z-index: 1;
     opacity: 0;
-    left: 0;
-    right: 0;
-}
-.page-logo {
-    @extend.page-position-base;
-    top: 30%;
-    img{
-    }
-}
+    _opacity: 1;
+              *opacity: 1;
+              left: 0;
+              right: 0;
+          }
+          .page-logo {
+              @extend %page-position-base;
+              top: 30%;
+          }
 
-.page-navigation {
-    @extend .page-position-base ;
-    top: 12%;
-    opacity: 1;
-    a {
-        display: block;
-        position:relative;
-    }
-    .nav-home {
-        bottom: 447px;
-        left: 60px;
+          .page-navigation {
+              @extend %page-position-base ;
+              top: 50%;
+              opacity: 1;
+              z-index: 1;
+              height: 413px;
+              margin-top: -200px;
+              -webkit-animation: page-nav-move 100s linear -2s infinite;
+              -moz-animation: page-nav-move 100s linear -2s infinite;
+              -ms-animation: page-nav-move 100s linear -2s infinite;
+              animation: page-nav-move 100s linear  -2s infinite ;
+              a {
+                  display: block;
+                  position:relative;
+                  opacity: 0.5;
+                  &:hover{
+                      opacity: 1;
+                  }
+              }
+              .nav-home {
+                  bottom: 447px;
+                  left: 60px;
 
-    }
-    .nav-about{
-        bottom: 286px;
-        right: 158px;  
-    }
-    .nav-contact-us {
-        bottom: 620px;
-        right: 140px;
-    }
-    .nav-cor-culture{
-        bottom: 405px;
-        left: 57px;
-    }
-    .nav-company-profile {
-        bottom: 687px;
-        left: 211px;
-    }
-    
-}
+              }
+              .nav-about{
+                  bottom: 286px;
+                  right: 158px;  
+              }
+              .nav-contact-us {
+                  bottom: 620px;
+                  right: 140px;
+              }
+              .nav-cor-culture{
+                  bottom: 405px;
+                  left: 57px;
+              }
+              .nav-company-profile {
+                  bottom: 687px;
+                  left: 211px;
+              }
 
+          }
 
+          .page-home-link {
+              @extend %page-position-base;
+              top: 75%;
+          }
+         
+          .page-team-menber {
+              @extend %page-position-base ;
+              opacity: 1;
+              z-index: 1;
+              top: 25%;
+              width: 393px;
+              height: 453px;
+              left: 35%;
+              -webkit-animation: page-nav-move 50s linear 0s infinite;
+              -moz-animation: page-nav-move 50s linear 0s infinite;
+              -ms-animation: page-nav-move 50s linear 0s infinite;
+              animation: page-nav-move 50s linear  0s infinite ;
+              img{
+              }
+          } 
+          .page-team-list-background {
+              display: none; 
+              width: 100%;
+               height: 100%;
+               position: fixed;
+               z-index: 2;
+               background: $black-color;
+               opacity: 0.9;
+          }
+          .page-team-list {
+               display: none;
+               position: fixed;
+               z-index: 3;
+               width: 100%;
+               height: 100%;
+            
+             .page-team-img {
+                   position: fixed;
+                   left: 0;
+                   right: 0;
+                   top: 70px;
+                   img {
+                     display: none;   
+                   }
+               }
+              .page-team-close {
+                position: fixed;
+                left: 97%;
+              }
+              .page-team-head-list{
+                  .transerse_line {
+                      width:500px;
+                      height:1px;
+                      margin:0px auto;
+                      padding-top:0px;
+                      background-color:#D5D5D5;
+                      overflow:hidden;
+                      position: absolute;
+                      left: 0;
+                      right: 0;
+                      top: 50%;
+                      z-index: -1;
+                  }
+                  li{
+                      display: inline;
+                      margin-left: 30px;
+                      img{
+                      border-radius: 24px;
+                      }
+                      a {
+                          opacity: 0.5;
+                          &:hover{
+                              opacity: 1;
+                          }
+                      }
+                  }
+                position: fixed;
+                left: 0;
+                right: 0;
+                bottom: 10%;
+              }
+          }
+          %page-profile-base{
+              border: 1px solid white;
+              border-radius: 45px;
+              width: 60px;
+              position: absolute;
+              height: 60px;
+              line-height: 60px;
+              color: black;
+              background: white;
+              &:hover {
+                  color: white;
+                  background: #31c384;
+                  }
+              }
+          .page-profile {
+              position: fixed;
+              left: 0;
+              right: 0;
+              top: 25%;
+              .page-profile-image{
+                  width: 70%;
+              }
+              
+              .page-profile-one {
+                  @extend %page-profile-base;
+                  bottom: 80%;
+                  left: 25%;
+              }
+              .page-profile-two {
+                  @extend %page-profile-base;
+                  bottom: 99%;
+                  left: 68%;
+              }
+              .page-profile-three {
+                  @extend %page-profile-base;
+                  bottom: -14%;
+                  left: 50%;
+              }
+              .page-profile-four {
+                  @extend %page-profile-base;
+                  bottom: 17%;
+                  left: 78%; 
+              }
+              .page-profile-text {
+                  position: absolute;
+                  left: 138%;
+                  top: -31%;
+                  width: 400px;
+                  text-align: left;
+              }
+          }
+          // 动画
+          @-moz-keyframes page-nav-move{
+              0% {
+                  transform:rotate(0deg);
+                  -webkit-transform:rotate(0deg);
+              }
+              70% {
+                  transform:rotate(360deg);
+                  -webkit-transform:rotate(360deg);
+              }
+              100% {
+                  transform:rotate(360deg);
+                  -webkit-transform:rotate(360deg);
+              }    
+          }
+          @-webkit-keyframes page-nav-move{
+              0% {
+                  transform:rotate(0deg);
+                  -webkit-transform:rotate(0deg);
+              }
+              70% {
+                  transform:rotate(360deg);
+                  -webkit-transform:rotate(360deg);
+              }
+              100% {
+                  transform:rotate(360deg);
+                  -webkit-transform:rotate(360deg);
+              }    
+          }
+          @keyframes page-nav-move{
+              0% {
+                  transform:rotate(0deg);
+                  -webkit-transform:rotate(0deg);
 
-.page-home-link {
-    @extend .page-position-base;
-    top: 75%;
-}
+              }
+              70% {
+                  transform:rotate(360deg);
+                  -webkit-transform:rotate(360deg);
+              }
+              100% {
+                  transform:rotate(360deg);
+                  -webkit-transform:rotate(360deg);
+              }
+          }

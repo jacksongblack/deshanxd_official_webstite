@@ -1,11 +1,9 @@
 /**
- * Site header
+ * 全站头部
  */
 .site-header {
     min-height: 56px;
     background-color: $black-color;
-    background-color: black;
-    // Positioning context for the mobile navigation icon
     position: relative;
 
 }
@@ -23,11 +21,15 @@
     }
 
 }
-
+/**
+ * 头部商标
+ */
 .site-header-brand {
     padding-left: 21%
 }
-
+/**
+ * 全站表头
+ */
 .site-title {
     font-size: 26px;
     line-height: 56px;
@@ -38,7 +40,9 @@
         height: 45px;
     }
 }
-
+/**
+ * 全站导航
+ */
 .site-nav {
     float: left;
     line-height: 56px;
@@ -56,8 +60,7 @@
         } 
 
     }
-
-    .page-link {
+   .page-link {
         color: $text-color;
         line-height: $base-line-height;
 
@@ -70,36 +73,20 @@
 
 }
 
-
-
 /**
- * Site footer
+ * 全站 footer
  */
 .site-footer {
-    z-index: 1;
+    z-index: -1;
     position: fixed;
     bottom: 3%;
-    left: 38%;
-    right: 38%;
+    left: 0;
+    right: 0;
     text-align: center;
     color: $grey-color;
 }
 
-
-
-/**
- * Page content
- */
-.page-content {
-    padding: $spacing-unit 0;
-}
-
-.page-heading {
-    font-size: 20px;
-}
-
-
-.page-next-previous-base {
+%page-next-previous-base {
     position: fixed;
     width: 40px; 
     height: 40px;
@@ -122,13 +109,17 @@
     
  }
 }
-
+/**
+ * 下一页
+ */
 .page-next {
-    @extend .page-next-previous-base;
+    @extend %page-next-previous-base;
     left: 96%;
 }
-
+/**
+ * 上一页
+ */
 .page-previous {
-    @extend .page-next-previous-base;
+    @extend %page-next-previous-base;
     right: 96%;
 }
