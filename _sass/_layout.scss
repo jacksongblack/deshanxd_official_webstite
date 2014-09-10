@@ -37,7 +37,7 @@
     margin-bottom: 0;
     float: left;
     img {
-        height: 45px;
+        margin-top: 7px;
     }
 }
 /**
@@ -84,6 +84,7 @@
     right: 0;
     text-align: center;
     color: $grey-color;
+   
 }
 
 %page-next-previous-base {
@@ -106,7 +107,6 @@
 
     &:hover {
      background-color: $green-color;
-    
  }
 }
 /**

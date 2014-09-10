@@ -33,6 +33,12 @@ img{
               left: 0;
               right: 0;
           }
+          .air-shadows{
+              position:absolute;
+              top: 10%;
+              left: 0;
+              right: 0;
+          }
           .page-logo {
               @extend %page-position-base;
               top: 30%;
@@ -40,7 +46,8 @@ img{
 
           .page-navigation {
               @extend %page-position-base ;
-              top: 50%;
+
+              top: 40%;
               opacity: 1;
               z-index: 1;
               height: 413px;
@@ -52,10 +59,7 @@ img{
               a {
                   display: block;
                   position:relative;
-                  opacity: 0.5;
-                  &:hover{
-                      opacity: 1;
-                  }
+                  z-index: 10;
               }
               .nav-home {
                   bottom: 447px;
@@ -67,16 +71,23 @@ img{
                   right: 158px;  
               }
               .nav-contact-us {
-                  bottom: 620px;
-                  right: 140px;
+                  bottom: 616px;
+                  right: 143px;
               }
               .nav-cor-culture{
-                  bottom: 405px;
+                  bottom: 402px;
                   left: 57px;
               }
               .nav-company-profile {
                   bottom: 687px;
                   left: 211px;
+              }
+              .nav-radius {
+                  display: none;
+                  position: relative;
+                  bottom: 932px;
+                  left: 13px;
+                  z-index: 1;
               }
 
           }
@@ -85,7 +96,7 @@ img{
               @extend %page-position-base;
               top: 75%;
           }
-         
+
           .page-team-menber {
               @extend %page-position-base ;
               opacity: 1;
@@ -93,42 +104,42 @@ img{
               top: 25%;
               width: 393px;
               height: 453px;
-              left: 38%;
+              left: 0;
+              margin: auto;
               -webkit-animation: page-nav-move 50s linear 0s infinite;
               -moz-animation: page-nav-move 50s linear 0s infinite;
               -ms-animation: page-nav-move 50s linear 0s infinite;
               animation: page-nav-move 50s linear  0s infinite ;
-              img{
-              }
           } 
           .page-team-list-background {
               display: none; 
               width: 100%;
-               height: 100%;
-               position: fixed;
-               z-index: 2;
-               background: $black-color;
-               opacity: 0.9;
+              height: 100%;
+              position: fixed;
+              z-index: 2;
+              background: $black-color;
+              opacity: 0.9;
           }
           .page-team-list {
-               display: none;
-               position: fixed;
-               z-index: 3;
-               width: 100%;
-               height: 100%;
-            
-             .page-team-img {
-                   position: fixed;
-                   left: 0;
-                   right: 0;
-                   top: 20%;
-                   img {
-                     display: none;   
-                   }
-               }
+              display: none;
+              position: fixed;
+              z-index: 3;
+              width: 100%;
+              height: 100%;
+
+              .page-team-img {
+                  position: fixed;
+                  left: 0;
+                  right: 0;
+                  top: 15%;
+                  img {
+                      display: none;   
+                  }
+              }
               .page-team-close {
-                position: fixed;
-                right: 8px;
+                  position: relative;
+                  top: 27px;
+                  left: 122px;
               }
               .page-team-head-list{
                   .transerse_line {
@@ -148,7 +159,7 @@ img{
                       display: inline;
                       margin-left: 30px;
                       img{
-                      border-radius: 24px;
+                          border-radius: 24px;
                       }
                       a {
                           opacity: 0.5;
@@ -157,68 +168,87 @@ img{
                           }
                       }
                   }
-                position: fixed;
-                left: 0;
-                right: 0;
-                bottom: 10%;
+                  position: relative;
+                  left: 0;
+                  right: 0;
+                  top: 80%;
               }
           }
           %page-profile-base{
               border: 2px solid white;
               border-radius: 45px;
               width: 60px;
-              position: absolute;
+              position: relative;
               height: 60px;
               line-height: 60px;
               font-family: "微软雅黑";
               font-size: 12px;
               &:hover {
                   background: #ff9900;
-                  }
               }
+          }
           .page-profile {
               position: fixed;
               left: 0;
               right: 0;
               top: 25%;
               color: white;
-              .page-profile-image{
-                  width: 70%;
-              }
-              
-              .page-profile-one {
-                  @extend %page-profile-base;
-                  bottom: 73.5%;
-                  left: 26%;
-              }
-              .page-profile-two {
-                  @extend %page-profile-base;
-                  bottom: 100%;
-                  left: 66%;
-              }
-              .page-profile-three {
-                  @extend %page-profile-base;
-                  bottom: 17%;
-                  left: 48.5%;
-              }
-              .page-profile-four {
-                  @extend %page-profile-base;
-                  bottom: -18%;
-                  left: 74.8%; 
-              }
-              .page-profile-text {
-                  position: absolute;
-                  left: 139%;
-                  top: -15%;
-                  width: 400px;
-                  display: none;
-                  font-size: 12px;
-                  line-height: 21px;
-                  color: white;
-                  text-indent: 20px;
-                  text-align: left;
-                  font-family: "宋体";
-              }
+              width: 1100px;
+              height: 286px;
+              margin: auto;
+          }
+          .page-profile-image{
+          }
+
+          .page-profile-one {
+              @extend %page-profile-base;
+              bottom: 273px;
+              left: 167px;
+          }
+          .page-profile-two {
+              @extend %page-profile-base;
+              bottom: 165px;
+              left: 518px;
+          }
+          .page-profile-three {
+              @extend %page-profile-base;
+              bottom: 478px;
+              left: 795px;
+          }
+          .page-profile-four {
+              @extend %page-profile-base;
+              bottom: 194px;
+              left: 932px; 
+          }
+          .page-profile-text {
+              display: none;
+              position: absolute;
+              left: 139%;
+              top: -15%;
+              width: 350px;
+              line-height: 21px;
+              color: white;
+              text-indent: 20px;
+              text-align: left;
+              font-family: "宋体";
+              font-size: 12px;
+          }
+//
+         .page-company {
+             position: fixed;
+             top: 35%;
+             width: 950px;
+             left: 0;
+             right: 0;
+             margin-left: auto;
+             margin-right: auto;
+             color: white;
+             font-family: "微软雅黑";
+             font-size: 16px;
+             text-indent: 2em;
+             p{
+               text-align:left;
+             }
           }
           // 动画
           @-moz-keyframes page-nav-move{

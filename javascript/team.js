@@ -24,7 +24,7 @@
             var img_url = $(this).attr("data-img");
             $(".page-team-img img").each(
                 function(){
-                if ($(this).attr("src") === img_url ){
+                if ($(this).attr("src") === img_url || $(this).attr("src") == "images/close.png" ){
                     $(this).show();
                 }else{
                     $(this).hide();
@@ -32,6 +32,20 @@
             } 
             );  
         }  
+        );
+        $(".page-navigation a").hover(
+            function(){
+            var img_url = $(this).attr("img-url");
+            $(".nav-radius").each(
+               function(){
+               if ($(this).children("img").attr("src") == img_url){
+                   $(this).show();
+               }else{
+                  $(this).hide();
+               }
+           }
+           );  
+        }
         );
         $(".page-profile div").each(
             function(){
