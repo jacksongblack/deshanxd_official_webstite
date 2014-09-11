@@ -4,6 +4,14 @@
         $(".page-team-menber a").click(function(){
             $(".page-team-list").show();
             $(".page-team-list-background").show();
+           var current_click = $(this).attr("img-url");
+           $(".page-team-head-list li a").each(
+               function(){
+               if($(this).attr("data-img") === current_click){
+                   $(this).trigger('mouseenter');
+               }
+           }
+           );
         });
         $(".page-team-close").click(function(){
             $(".page-team-list").hide();

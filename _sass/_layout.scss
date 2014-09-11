@@ -1,6 +1,13 @@
 /**
  * 全站头部
  */
+@media screen and (min-width: 800px) and (max-width: 1919px){
+    .site-nav {
+        .site-menu-li{
+            margin-left: 5%;
+        }
+    }
+}
 .site-header {
     min-height: 56px;
     background-color: $black-color;
@@ -21,6 +28,7 @@
     }
 
 }
+    
 /**
  * 头部商标
  */
@@ -123,3 +131,5 @@
     @extend %page-next-previous-base;
     right: 96%;
 }
+
+
