@@ -44,6 +44,15 @@ Animate.prototype = {
         if($(".page-map-tag").length !== 0){
          Animate("opecity_moves",".page-map-tag").always();
         }
+        if($(".page-yezhong-radius").length !== 0){
+         Animate("opecity_moves",".page-yezhong-radius").start();     
+        Animate("opecity_moves",".page-fengpei-radius").delay(1000);
+        Animate("opecity_moves",".page-xiangke-radius").delay(1500);
+        Animate("opecity_moves",".page-wugaomei-radius").delay(2000);
+        Animate("opecity_moves",".page-tubing-radius").delay(2500);
+        Animate("opecity_moves",".page-renxiangdong-radius").delay(3000);
+        Animate("opecity_moves",".page-xiongyijie-radius").delay(3500);
+        }
     });
 })(jQuery);
 
