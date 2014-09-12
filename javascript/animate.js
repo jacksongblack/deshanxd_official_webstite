@@ -33,27 +33,40 @@ Animate.prototype = {
       setTimeout('Animate("'+this.moves +'","'+this.selector +'").always()',1);
     } 
 };
+function AjaxMove(selector){
+     if(this instanceof AjaxMove){
+        this.selector = selector;
+    }else{
+     return new Animate(selector);
+    }
+}
 
+AjaxMove.prototype = {
+ constructor: AjaxMove,
+ getOrigin:function(fn){
+     $.get($(selector).attr("href"),function(response){
+        var html = $(response).find("body").children();
+        $("body").html(html);
+        if(typeof fn === "function"){
+            fn();
+        }
+     });
+ }
 
-(function($){
-    $(document).ready( function(){
-        if($(".page-logo").length + $('.page-home-link').length == 2){
-        Animate("opecity_moves",".page-logo").start();
-        Animate("opecity_moves",".page-home-link").delay(1000);
-        }
-        if($(".page-map-tag").length !== 0){
-         Animate("opecity_moves",".page-map-tag").always();
-        }
-        if($(".page-yezhong-radius").length !== 0){
-         Animate("opecity_moves",".page-yezhong-radius").start();     
-        Animate("opecity_moves",".page-fengpei-radius").delay(1000);
-        Animate("opecity_moves",".page-xiangke-radius").delay(1500);
-        Animate("opecity_moves",".page-wugaomei-radius").delay(2000);
-        Animate("opecity_moves",".page-tubing-radius").delay(2500);
-        Animate("opecity_moves",".page-renxiangdong-radius").delay(3000);
-        Animate("opecity_moves",".page-xiongyijie-radius").delay(3500);
-        }
-    });
-})(jQuery);
+};
+
+var body_move = [
+    {
+    position:"fixed",
+    left:"900px"
+},
+{  position:"fixed",
+left:"500px"},{
+position:"fixed",
+left:"300px"  
+}
+];
+    
+
 
 

@@ -5,9 +5,6 @@
 
 $white-color:      #fefefe;
 $black-color:      #141414;
-img{
-    max-width: 200%
-}
 .page-background{
     overflow:hidden;
     z-index: -99;
@@ -120,8 +117,11 @@ img{
           }
 
           .page-home-link {
-              @extend %page-position-base;
+              position: absolute;
               top: 75%;
+              opacity:0;
+              left: 0;
+              right: 0;
           }
 
           .page-team-menber {
@@ -134,37 +134,37 @@ img{
               left: 0;
               margin: auto;
               .page-yezhong-radius {
-                 @extend %page-radius;
+                  @extend %page-radius;
                   top: 160px;
                   left: 83px;
               }
               .page-fengpei-radius{
-                 @extend %page-radius;
-                 right: 111px;
+                  @extend %page-radius;
+                  right: 111px;
               }
               .page-xiangke-radius{
-                 @extend %page-radius;
-                 left: 194px;
-                 bottom: 86px;
+                  @extend %page-radius;
+                  left: 194px;
+                  bottom: 86px;
               }
               .page-wugaomei-radius{
-                @extend %page-radius;
-                left: 42px;
-                top: 83px;
+                  @extend %page-radius;
+                  left: 42px;
+                  top: 83px;
               }
               .page-tubing-radius{
-                @extend %page-radius;
-                left: 134px; 
+                  @extend %page-radius;
+                  left: 134px; 
               }
               .page-renxiangdong-radius{
-                @extend %page-radius;
-                right: 217px;
-                bottom: 52px;
+                  @extend %page-radius;
+                  right: 217px;
+                  bottom: 52px;
               }
               .page-xiongyijie-radius{
-                @extend %page-radius;
-                bottom: 407px;
-                right: 127px;
+                  @extend %page-radius;
+                  bottom: 407px;
+                  right: 127px;
               }
           } 
           %page-radius{
@@ -275,6 +275,15 @@ img{
               bottom: 478px;
               left: 795px;
           }
+          @media screen and(max-width: 1254px){
+              .page-profile-three {
+                  .page-profile-text{
+                      left: -500%;
+                  }
+              }
+
+          }
+
           .page-profile-four {
               @extend %page-profile-base;
               bottom: 194px;
@@ -288,12 +297,26 @@ img{
               width: 350px;
               line-height: 21px;
               color: white;
-              text-indent: 20px;
               text-align: left;
               font-family: "宋体";
               font-size: 12px;
           }
-          //
+          //公司简介
+          @media screen and (max-width: 1691px){
+              .page-company{
+                  overflow: auto;
+                  p{
+                      font-size: 14px;
+                  }
+              }
+          }
+          @media screen and (min-width: 1691px){
+              .page-company{
+                  p{
+                      font-size: 16px;
+                  }
+              }
+          }
           .page-company {
               position: fixed;
               top: 20%;
@@ -305,7 +328,6 @@ img{
               color: white;
               p{
                   font-family: "微软雅黑";
-                  font-size: 16px;
                   text-indent: 2em;   text-align:left;
               }
           }

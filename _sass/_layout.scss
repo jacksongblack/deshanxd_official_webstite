@@ -1,13 +1,7 @@
 /**
  * 全站头部
  */
-@media screen and (min-width: 800px) and (max-width: 1919px){
-    .site-nav {
-        .site-menu-li{
-            margin-left: 5%;
-        }
-    }
-}
+
 .site-header {
     min-height: 56px;
     background-color: $black-color;
@@ -51,6 +45,21 @@
 /**
  * 全站导航
  */
+@media screen and (min-width: 920px) and (max-width: 1261px){
+    .site-nav {
+        .nav-menu-li{
+            margin-left: 5%;
+        }
+    }
+}
+@media screen and (min-width: 1261px){
+    .site-nav {
+        .nav-menu-li{
+            margin-left: 10%;
+        }
+    }
+}
+
 .site-nav {
     float: left;
     line-height: 56px;
@@ -59,7 +68,6 @@
         float: left;
         display: block;
         position: relative;
-        margin-left: 10%;
         .menu-link{
             font-size: 14px;           
         }
