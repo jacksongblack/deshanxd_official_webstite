@@ -10,21 +10,33 @@ $black-color:      #141414;
     z-index: -99;
     position: fixed;
     width: 100%;
-    height: 100%;
+    height: 720px;
     .page-background-image{
         width: 100%;
         height: 100%;
     }
 }
-.page-map-tag {
-    position: absolute;
-    top: 47%;
-    right: 63%;
+.page-map-background {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -99;
+    background-color: #31c384;
 }
-.page-address {
+.page-map {
     position: absolute;
-    top: 20%;
-    right: 20%;
+    top: 15%;
+    width:994px;
+    height: 501px;
+    left: 0;
+    right:0;
+    margin: auto;
+}
+.page-map-address {
+    position: relative;
+    bottom: 500px;
+    left: 677px;
+    width: 317px;
 
     p {
         text-align: left;
@@ -32,21 +44,11 @@ $black-color:      #141414;
         color: white;
         font-size:16px;
     }
-} 
-@media screen and (max-width: 1919px){
-    .page-address {
-        position: absolute;
-        top: 20%;
-        right: 10%;
-
-        p {
-            text-align: left;
-            font-family: "微软雅黑";
-            color: white;
-            font-size:16px;
-        }
-    }
-
+}
+.page-map-tag {
+    position: relative;
+    bottom:272px;
+    right:208px;
 }
 %page-position-base {
     position: fixed;
@@ -253,7 +255,7 @@ $black-color:      #141414;
               right: 0;
               top: 30%;
               color: white;
-              width: 1100px;
+              width: 900px;
               height: 286px;
               margin: auto;
           }
@@ -262,18 +264,18 @@ $black-color:      #141414;
 
           .page-profile-one {
               @extend %page-profile-base;
-              bottom: 273px;
-              left: 167px;
+              bottom: 236px;
+              left: 132px;
           }
           .page-profile-two {
               @extend %page-profile-base;
-              bottom: 165px;
-              left: 518px;
+              bottom: 148px;
+              left: 418px;
           }
           .page-profile-three {
               @extend %page-profile-base;
-              bottom: 478px;
-              left: 795px;
+              bottom: 426px;
+              left: 646px;
           }
           @media screen and(max-width: 1254px){
               .page-profile-three {
@@ -287,7 +289,7 @@ $black-color:      #141414;
           .page-profile-four {
               @extend %page-profile-base;
               bottom: 194px;
-              left: 932px; 
+              left: 757px; 
           }
           .page-profile-text {
               display: none;
