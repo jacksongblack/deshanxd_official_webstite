@@ -22,6 +22,17 @@ body {
     font-weight: 300;
     color: $text-color;
     background-color:transparent;
+    overflow: hidden;
+}
+@media screen and (max-width: 1000px) {
+    body{
+        overflow: auto;
+    }
+}
+@media screen and (max-height: 700px){
+    body{
+        overflow: auto
+    }
 }
 
 /**
