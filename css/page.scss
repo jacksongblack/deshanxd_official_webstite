@@ -131,13 +131,14 @@ $black-color:      #141414;
           }
 
           .page-team-menber {
-              position: relative;
+              position: absolute;
               opacity: 1;
               z-index: 1;
-              top: 175px;
+              top: 250px;
               width: 393px;
               height: 453px;
               left: 0;
+              right:0;
               margin: auto;
               .page-yezhong-radius {
                   @extend %page-radius;
@@ -187,8 +188,8 @@ $black-color:      #141414;
               opacity: 0.9;
           }
           .page-team-manifesto {
-              position: relative;
-              top: 100px;
+              position: absolute;
+              top: 120px;
               left: 0;
               right: 0;
               margin: 0 auto;
