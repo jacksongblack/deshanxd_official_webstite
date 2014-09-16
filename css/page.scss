@@ -257,29 +257,27 @@ $black-color:      #141414;
               position: absolute;
               left: 0;
               right: 0;
-              top: 40%;
+              top: 30%;
               color: white;
-              width: 900px;
+              width: 999px;
               height: 286px;
               margin: auto;
-          }
-          .page-profile-image{
           }
 
           .page-profile-one {
               @extend %page-profile-base;
-              bottom: 236px;
-              left: 132px;
+              bottom: 253px;
+              left: 150px;
           }
           .page-profile-two {
               @extend %page-profile-base;
-              bottom: 148px;
-              left: 418px;
+              bottom: 157px;
+              left: 470px;
           }
           .page-profile-three {
               @extend %page-profile-base;
-              bottom: 426px;
-              left: 646px;
+              bottom: 450px;
+              left: 720px;
           }
           @media screen and(max-width: 1254px){
               .page-profile-three {
@@ -293,7 +291,7 @@ $black-color:      #141414;
           .page-profile-four {
               @extend %page-profile-base;
               bottom: 194px;
-              left: 757px; 
+              left: 844px; 
           }
           .page-profile-text {
               display: none;
@@ -325,7 +323,7 @@ $black-color:      #141414;
           }
           .page-company {
               position: absolute;
-              top: 20%;
+              top: 15%;
               width: 950px;
               left: 0;
               right: 0;
