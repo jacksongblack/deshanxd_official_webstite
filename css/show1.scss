@@ -1,0 +1,57 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+$public-color: #fffff;
+
+ $public-color: #ffffff;
+   $class-a-top: 250px;
+   @mixin class-base($top-value:250px,$right-value:0,$left-value:0) {
+             position: absolute;
+                   left: $right-value;
+                         right: $left-value;
+                               color: $public-color;
+                                     top: $top-value;
+                                       
+   } 
+
+   .class-a {
+             @include class-base()
+               
+   }
+   .class-b {
+             @include class-base($class-a-top*2)
+              
+   }
+   .class-c{
+             @include class-base(100px,0,100px);
+             .class-d {
+                         @include class-base($class-a-top*10,150px,120px);
+                           
+             }
+
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

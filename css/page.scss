@@ -11,7 +11,7 @@ $black-color:      #141414;
     position: absolute;
     width: 100%;
     height: 100%;
-    min-height: 1000px;
+    min-height: 800px;
     min-width: 1000px;
     .page-background-image{
         width: 100%;
@@ -24,7 +24,7 @@ $black-color:      #141414;
     height: 100%;
     z-index: -99;
     background-color: #31c384;
-    min-height: 1000px;
+    min-height: 720px;
     min-width: 1000px;
 }
 .page-map {
@@ -391,4 +391,31 @@ $black-color:      #141414;
                   transform:rotate(360deg);
                   -webkit-transform:rotate(360deg);
               }
+          }
+          $public-color: #ffffff;
+          $class-a-top: 250px;
+          @mixin class-base($top-value:250px,$right-value:0,$left-value:0) {
+              position: absolute;
+              left: $right-value;
+              right: $left-value;
+              color: $public-color;
+              top: $top-value;
+
+          } 
+
+          .class-a {
+              @include class-base()
+
+          }
+          .class-b {
+              @include class-base($class-a-top*2)
+
+          }
+          .class-c{
+              @include class-base(100px,0,100px);
+              .class-d {
+                  @include class-base($class-a-top*10,150px,120px);
+
+              }
+
           }
